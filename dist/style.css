@@ -162,6 +162,11 @@ a:hover {
   padding-left: 1.5rem;
 }
 
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -304,4 +309,37 @@ button:hover::before,
 }
 .header__links a:hover::before {
   opacity: 1;
+}
+
+.hero__image {
+  position: relative;
+  background-image: url("/images/bg-intro-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 17.5rem;
+}
+.hero__image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("/images/image-mockups.png");
+  background-size: 93%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.hero__text {
+  text-align: center;
+}
+.hero__text h1 {
+  font-weight: 300;
+  font-size: 2.31rem;
+  line-height: 1.15;
+  color: hsl(233, 26%, 24%);
+  margin-bottom: 1.5rem;
+}
+.hero__text p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
 }/*# sourceMappingURL=style.css.map */
