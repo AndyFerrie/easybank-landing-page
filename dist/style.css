@@ -162,11 +162,6 @@ a:hover {
   padding-left: 1.5rem;
 }
 
-.container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
 .flex {
   display: flex;
 }
@@ -311,6 +306,12 @@ button:hover::before,
   opacity: 1;
 }
 
+@media (min-width: 64em) {
+  .hero {
+    display: flex;
+    align-items: center;
+  }
+}
 .hero__image {
   position: relative;
   background-image: url("/images/bg-intro-mobile.svg");
@@ -318,6 +319,15 @@ button:hover::before,
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 17.5rem;
+}
+@media (min-width: 64em) {
+  .hero__image {
+    flex: 3;
+    order: 2;
+    height: 41rem;
+    background-image: url("/images/bg-intro-desktop.svg");
+    background-position: left center;
+  }
 }
 .hero__image::before {
   content: "";
@@ -332,12 +342,24 @@ button:hover::before,
 .hero__text {
   text-align: center;
 }
+@media (min-width: 64em) {
+  .hero__text {
+    flex: 2;
+    order: 1;
+    text-align: left;
+  }
+}
 .hero__text h1 {
   font-weight: 300;
   font-size: 2.31rem;
   line-height: 1.15;
   color: hsl(233, 26%, 24%);
   margin-bottom: 1.5rem;
+}
+@media (min-width: 64em) {
+  .hero__text h1 {
+    font-size: 3.25rem;
+  }
 }
 .hero__text p {
   line-height: 1.5;
